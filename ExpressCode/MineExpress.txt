@@ -1,0 +1,81 @@
+개발 포지션: 모드
+버전:  1.21.10 / Fabric-0.18.1
+pack_resource = 69.0 / pack_data = 88.0
+Name: ChristmasExpressTycoon ( 이하, CET )
+
+[ MakeProgram ( 4 / 4 ) ]
+- Piskel ( Pixel, Dot maker )
+- BlockBench ( Minecraft Model Maker )
+- CurseForge ( Mod )
+- IntelliJ IDEA ( Code )
+-- .txt .json .mcmeta .png ~
+
+[ MakeMod ( 4 / 4 ) ]
+- Command Block IDE
+- NBT Autocomplete
+- AxiomTool
+-- Fabric API
+
+[ BlockTexture ]
+16 x 16 pixel
+
+[ 제작 ]
+- 도트 제작 및 적용 ( 캐릭터, 씨앗과 꽃 )
+- 맵 제작 ( 기초적인 베이스 / 메인맵, 학교 등 )
+- 튜토리얼 제작
+- 시스템 구현 ( 시간, CET요소, 도구 언락, 퀘스트  )
+- 이름 변경 ( 탭리스트 및, 표기 )
+- 화폐 ( 크레딧 )
+
+[ ResourcePack Folder ]
+CPDM_EventResourcepack 1> assets*
+2> pack.mcmeta
+
+*assets > minecraft 1> models*
+2> textures > items > (.png / 이미지 파일들)
+
+*models 1> item > (item.json)
+*models 2> (sectionName / folder) > (section2Name.json)
+
+[ .mcmeta ]
+{
+  "pack": {
+    "description": "§bMNCET_Resourcepack\n§7by §6CPDM 5kyR4_",
+    "min_format": [69, 0],
+    "max_format": [2147483647, 0]
+  }
+}
+
+[ item.json ]
+{
+    "parent": "item/handheld",
+    "textures": {"layer0": "item'/사진명"},
+    "overrides":
+    [
+        {"predicate":{"custom_model_data":1}, "model":"모델내부지정파일/원하는영어이름1"},
+        {"predicate":{"custom_model_data":2}, "model":"모델내부지정파일/원하는영어이름2"}
+    ]
+}
+
+[ section2 .json2 ]
+@@ = item / block / (builtin)
+(item)&& = handheld, generated, (builtin/)entity
+(block)%% = cube_all, cube_column, slab/stairs
+{
+    "parent": "@@/&& or %%",
+    "textures":
+    {
+        "layer0": "item/사진명"
+    }
+}
+
+[ CustomItem to In game ]
+/give 5kyR4 아이템명{CustomModelData:N}
+=> Del.
+
+[ Map Roader ]
+C:\Users\namto\AppData\Roaming\.minecraft
+
+[ CurseForge Map Roader ]
+C:\Users\namto\curseforge\minecraft\Instances\DevLevel
+

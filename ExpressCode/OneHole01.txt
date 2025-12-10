@@ -1,0 +1,106 @@
+OneHole01
+main: ( 122 -40 -20
+cmd: ( 122 -47 -15.5 )
+
+[ 위치 감지 / position sensor ]
+execute as
+@a[x=-0,y=-0,z=-0,distance=..0] run
+
+[ 현재 개체 ]
+@s[type=minecraft:player]
+
+w d r g b
+
+
+
+
+W: WorldSet
+: setworldspawn
+: @s spawnpoint
+( 122 -40 -20 )
+
+execute as
+@a[x=122,y=-40,z=-20,distance=..1] run
+gamemode adventure @s
+[ 반응: 레필 ]
+
+setworldspawn 122 -40 -20
+[ 반응: 레필 ]
+
+spawnpoint @s 122 -40 -20
+[ 반응: 레필 ]
+
+
+
+
+
+
+D: OneHole
+execute as
+@a[x=122,y=-40,z=-20,distance=..1] run
+effect clear @s[type=minecraft:player]
+[ 반복: 상시 ]
+[ 진입 시 포션 초기화 ]
+
+execute as
+@a[x=122,y=-40,z=-19,distance=..1] run
+effect give @s[type=minecraft:player] minecraft:slowness infinite 4 true
+[ 반복: 상시 ]
+[ 진입 시 구속 ]
+
+execute as
+@a[x=122,y=-40,z=10,distance=..1] run
+tp @s[type=minecraft:player] 122 -26.4 -3.5
+[ 반복: 상시 ]
+[ 최장 진입 시 메인텔 ] 
+
+execute as
+@a[x=122,y=-26.4,z=-3.5,distance=..0.5] run
+effect clear @s[type=minecraft:player]
+[ 반복: 상시 ]
+[ 메인텔 후 포션 초기화 ]
+
+execute as
+@a[x=122,y=-26.4,z=-3.5,distance=..0.5] run
+effect give @s[type=minecraft:player] minecraft:blindness 5 4 true
+[ 반복: 상시 ]
+[ 메인텔 후 실명5초 4단 ]
+
+execute as
+@a[x=122,y=-26.4,z=-3.5,distance=..0.5] run
+effect give @s[type=minecraft:player] minecraft:slowness 5 4 true
+[ 반복: 상시 ]
+[ 메인텔 후 구속5초 20단 ]
+
+execute as
+@a[x=122,y=-26.4,z=-3.5,distance=..0.5] run
+effect give @s[type=minecraft:player] minecraft:night_vision infinite 0 true
+[ 반복: 상시 ]
+[ 메인텔 후 야간투시 무한 ]
+
+
+
+
+
+
+R: blockSensor
+/execute as @a at @s
+if block ~0 ~-1 ~0
+minecraft:crying_obsidian run
+tp 134 -15 -3
+[ 반복: 상시 ]
+[ 플레이어의 아래에 우는흑요석이 감지될 경우로 tp ]
+
+/execute as @a at @s
+if block ~0 ~-1 ~0
+minecraft:crying_obsidian run
+tp 122 -29 -3.5
+[ 반복: 상시 ]
+[ 플레이어의 아래에 일반흑요석이 감지될 경우로 tp ]
+
+/execute as @a at @s
+if block 1~-1 ~-1 1~-1
+minecraft:crying_obsidian run
+tp 122 -40 -20
+[ 반복: 상시 ]
+[ 플레이어의 아래에 테스트블럭이 감지될 경우로 tp ]

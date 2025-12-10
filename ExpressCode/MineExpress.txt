@@ -21,61 +21,29 @@ Name: ChristmasExpressTycoon ( 이하, CET )
 
 [ 제작 ]
 - 도트 제작 및 적용 ( 캐릭터, 씨앗과 꽃 )
+( 리소스팩을 활용하여 도트 적용. )
+
 - 맵 제작 ( 기초적인 베이스 / 메인맵, 학교 등 )
+( Aixom 등 툴 이용 )
+
 - 튜토리얼 제작
-- 시스템 구현 ( 시간, CET요소, 도구 언락, 퀘스트  )
-- 이름 변경 ( 탭리스트 및, 표기 )
-- 화폐 ( 크레딧 )
+( 튜토리얼모드, 클래식모드, 무한모드 )
++ 여차하면 저장기능.? )
 
-[ ResourcePack Folder ]
-CPDM_EventResourcepack 1> assets*
-2> pack.mcmeta
+- 시스템 구현 ( 시간, CET요소, 도구 언락, 퀘스트 )
+#UI
+( 탭리스트: 유저이름및, 서버 1줄소개 )
+( 스코어보드: 현재 크레드 및 다음 목표치, 혹은 목표 아이템 )
+( 액션바: 실시간 지출및 획득 크레드 표기 )
+( 보스바: 타이머 )
 
-*assets > minecraft 1> models*
-2> textures > items > (.png / 이미지 파일들)
-
-*models 1> item > (item.json)
-*models 2> (sectionName / folder) > (section2Name.json)
-
-[ .mcmeta ]
-{
-  "pack": {
-    "description": "§bMNCET_Resourcepack\n§7by §6CPDM 5kyR4_",
-    "min_format": [69, 0],
-    "max_format": [2147483647, 0]
-  }
-}
-
-[ item.json ]
-{
-    "parent": "item/handheld",
-    "textures": {"layer0": "item'/사진명"},
-    "overrides":
-    [
-        {"predicate":{"custom_model_data":1}, "model":"모델내부지정파일/원하는영어이름1"},
-        {"predicate":{"custom_model_data":2}, "model":"모델내부지정파일/원하는영어이름2"}
-    ]
-}
-
-[ section2 .json2 ]
-@@ = item / block / (builtin)
-(item)&& = handheld, generated, (builtin/)entity
-(block)%% = cube_all, cube_column, slab/stairs
-{
-    "parent": "@@/&& or %%",
-    "textures":
-    {
-        "layer0": "item/사진명"
-    }
-}
-
-[ CustomItem to In game ]
-/give 5kyR4 아이템명{CustomModelData:N}
-=> Del.
+- 화폐 ( 크레딧: 마일리지, 마일 )
+단위: Mileage, 1M 2M 3M 10M 등
+: 각 마일리지는 매치의 아이템 구매용도로 사용됨, 남은 마일리지는 게임에 누적됨.
+: 누적된 마일리지는 추후 도입될 디스코드 도박시스템에 환원, 혹은 게임 내 요소 추가 예정
 
 [ Map Roader ]
 C:\Users\namto\AppData\Roaming\.minecraft
 
 [ CurseForge Map Roader ]
 C:\Users\namto\curseforge\minecraft\Instances\DevLevel
-

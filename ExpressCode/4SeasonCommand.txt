@@ -1,0 +1,33 @@
+4SeasonCommand
+Spr Smr Atn Wnt
+
+[ 현재 개체 ]
+@s[type=minecraft:player]
+
+
+Spr
+Particle:
+particle minecraft:composter -18
+5.0 5.0 4.0 0.0 20 force @a
+
+
+
+Smr
+Particle:
+particle minecraft:bubble -18
+5.0 5.0 4.0 0.0 20 force @a
+
+
+
+
+Atn
+Particle:
+particle minecraft:explosion_emitter -18
+5.0 5.0 4.0 0.0 20 force @a
+
+
+
+Wnt
+Particle:
+particle minecraft:snowflake 122 -18 13
+5.0 5.0 4.0 0.0 20 force @a

@@ -1,0 +1,51 @@
+CPDM - ExpressTown
+Worldover - 완전한 평지
+즉시 리스폰: 켜짐
+낙하 피해: 꺼짐
+죽음 후 보관함 보존: 꺼짐
+플레이어 위치 표시 바 켜기: 꺼짐
+pvp 켜기: 꺼짐
+습격 끄기: 켜짐
+팬텀, 몹, 약탈자정찰대, 떠돌이상인, 워든, 몬스터, 구조물: 꺼짐
+
+지름 35 원 베이스
+
+사계절 테마
+봄	: Miner's Glory
+여름	: OverFishing ( 낚시 )
+가을	: K-Farm
+겨울	: ExpressTycoon ( 좀비고 - 크익타 )
+공허	: VoidSpace ( 공허공간 - 화폐 교환소 OR 도박장 ) / ( 특수 퀘스트 및 방법으로 진입가능 )
+
+UNICODE: ↓↓↓
+
+[ 시작좌표 / OneHole / 01 ]
+: 121 -40 -20
+:
+/setworldspawn 121 -40 -20
+
+[ 게임메인센터 / 02 ]
+중심: 122 -29 -3
+particle minecraft:soul_fire_flame 122 -28 -3 1 2 1 0.05 2 force @a
+
+
+/spawnpoint 122 -29 -3.5
+/effect give @a minecraft:blindness 5 5 true ( 레드스톤 필요 )
+/effect give @a minecraft:night_vision infinite 1 true ( 연쇄형 , 항상 활성화 )
+
+
+
+
+
+
+
+
+
+봄: 보물찾기 ( 확률형 ) ( composter )
+
+여름: 모래, 물, 산호 등 해변? 느낌으로 포터 제작 ( bubble )
+
+가을: 광산 느낌 포터 ( explosion )
+
+겨울: 창백나무, 눈, 등 크리스마스 요소 살리기 ( snowflake )
+/particle minecraft:snowflake 105 -18 -2 4.0 4.0 4.0 0.0 20 force @a
